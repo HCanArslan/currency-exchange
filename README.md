@@ -1,3 +1,6 @@
+# Live Demo
+https://currency-exchange-peach.vercel.app/
+
 # Currency Rate Application
 
 This application fetches the latest exchange rates from an API and provides a currency converter functionality. The application is built using React, Redux, and Redux-Saga, with an additional use of Web Workers to handle background tasks.
