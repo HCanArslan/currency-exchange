@@ -1,7 +1,20 @@
 # Currency Rate Application
 
-
 This application fetches the latest exchange rates from an API and provides a currency converter functionality. The application is built using React, Redux, and Redux-Saga, with an additional use of Web Workers to handle background tasks.
+
+# Features
+Convert currencies from one to another using real-time exchange rates.
+Supports a wide range of currencies.
+Automatic update of exchange rates at regular intervals.
+Responsive design for optimal viewing experience on different devices.
+
+# Technologies Used
+React: JavaScript library for building user interfaces.
+Redux: State management library for managing application state.
+Material-UI: UI component library for designing consistent and attractive user interfaces.
+Axios: Promise-based HTTP client for making API requests.
+Exchangerate-API: External API for fetching real-time exchange rates.
+Worker Threads: Separate thread for handling API requests and data fetching, ensuring better performance and responsiveness.
 
 
 # Microfrontend Architecture and Scaling
