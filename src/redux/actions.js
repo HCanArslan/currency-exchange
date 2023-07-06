@@ -21,15 +21,15 @@ export const fetchRatesFailure = (error) => {
 export const fetchRates = () => {
   return async (dispatch) => {
     try {
-      const response = await axios.get('https://api.exchangerate-api.com/v4/latest/USD?access_key=d3b93c73b711dcf06ee34275fee331cc');
+      const response = await axios.get(`https://api.exchangerate-api.com/v4/latest/USD?access_key=${process.env.REACT_APP_API_KEY}`);
       const rates = response.data;
-
       dispatch(fetchRatesSuccess(rates));
     } catch (error) {
       dispatch(fetchRatesFailure(error.message));
     }
   };
 };
+
 
 export const updateRatesData = (ratesData) => {
     return {

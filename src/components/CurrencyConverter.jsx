@@ -24,10 +24,12 @@ const CurrencyConverter = () => {
   
   const handleFromCurrencyChange = useCallback((event) => {
     setFromCurrency(event.target.value);
+    setConvertedAmount(0);
   }, []);
 
   const handleToCurrencyChange = useCallback((event) => {
     setToCurrency(event.target.value);
+    setConvertedAmount(0); 
   }, []);
 
   const handleConvert = useCallback(() => {
@@ -38,6 +40,7 @@ const CurrencyConverter = () => {
   }, [amount, rates, fromCurrency, toCurrency]);
 
   const currencyOptions = Object.keys(rates);
+  const toCurrencySymbol = currencyOptions.includes(toCurrency) ? toCurrency : '';
 
   return (
     <Box
@@ -92,7 +95,7 @@ const CurrencyConverter = () => {
       </Button>
       {convertedAmount !== 0 && (
         <Typography variant="h6" align="center" mt={2}>
-          Converted Amount: {convertedAmount}
+          {convertedAmount} {toCurrencySymbol}
         </Typography>
       )}
     </Box>
